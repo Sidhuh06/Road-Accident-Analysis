@@ -1,0 +1,17 @@
+data_source:
+  kaggle_dataset: "xavierberge/road-accident-dataset"
+  download_dir: "data/raw"
+
+files:
+  main_file: "Road Accident Data.csv"
+
+ingestion:
+  unzip: true
+  create_dirs: true
+
+preprocessing:
+  output_dir: "data/processed"
+  drop_columns:
+    - "Carriageway_Hazards"
+  fill_categorical: true
+  handle_time: true  
